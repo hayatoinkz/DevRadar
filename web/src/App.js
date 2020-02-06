@@ -22,11 +22,11 @@ function App() {
     loadDevs();
   },[]);
 
-async function handleAddDev(data){
-  const response = await api.post('/devs', data)
+  async function handleAddDev(data){
+    const response = await api.post('/devs', data)
   
-  setDevs([...devs, response.data]);
-}
+    setDevs([...devs, response.data]);
+  }
 
   return (
     <div id="app">
